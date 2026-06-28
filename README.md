@@ -1,16 +1,88 @@
-# React + Vite
+# Musical Works Catalogue Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React frontend for managing a catalogue of musical works.
 
-Currently, two official plugins are available:
+This app connects to a separate ASP.NET Core API backend and supports viewing, adding, editing, and deleting works.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- View a list of musical works
+- Add new works through a form
+- Edit existing works
+- Delete works
+- Category selection using backend category IDs
+- Loading spinner while fetching data
+- Basic error handling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- React Router
+- Tailwind CSS
+- Vite
+- JavaScript
+- ASP.NET Core API backend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Backend API
+
+This frontend connects to a separate ASP.NET Core REST API.
+
+Backend repository: [MusicWorksAPI](https://github.com/JRobdata/MusicWorksAPI)
+
+During local development, API requests are proxied through Vite:
+
+```txt
+/api/works from http://localhost:5241/works
+```
+
+## Running Locally
+
+### 1. Start the backend API
+
+This frontend requires the separate ASP.NET Core API backend to be running.
+
+In the backend API project, run:
+
+```bash
+dotnet run
+```
+
+The API should run at:
+
+```txt
+http://localhost:5241
+```
+
+### 2. Start the frontend
+
+In this frontend project, install dependencies:
+
+```bash
+npm install
+```
+
+Then start the development server:
+
+```bash
+npm run dev
+```
+
+
+## Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the built version locally:
+
+```bash
+npm run preview
+```
+
+## Future Improvements
+
+- Add search and filtering
+- Deploy the frontend and backend
