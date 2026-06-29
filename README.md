@@ -23,6 +23,17 @@ This app connects to a separate ASP.NET Core API backend and supports viewing, a
 - JavaScript
 - ASP.NET Core API backend
 
+## Screenshots
+
+### Works List
+
+![Works list](public/screenshots/frontend1.png)
+
+### Add Work Form
+
+![Add work form](public/screenshots/frontend2.png)
+
+
 ## Backend API
 
 This frontend connects to a separate ASP.NET Core REST API.
